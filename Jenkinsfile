@@ -17,7 +17,7 @@ pipeline {
                         } catch (err) {
                             echo: 'caught error: $err'
                         }
-                        sh "docker run -dit --name apache1 -p 8082:80 -v website.html:/usr/local/apache2/htdocs/ httpd:2.4"
+                        sh "docker run -dit --name apache1 -p 8082:80 -v /Users/coffeebeans/.jenkins/workspace/handson2_main/website.html:/usr/local/apache2/htdocs/ httpd:2.4"
                     
                 }
             }
